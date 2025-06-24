@@ -17,16 +17,16 @@
         <!-- Right: Navigation Links -->
         <div class="space-x-4 text-sm font-medium">
           <Link
-            href="/login"
+            href="/register"
             class="text-gray-700 hover:text-[#670D2F] transition"
           >
-            LogIn
+            SignUp
           </Link>
           <Link
-            href="/register"
+            href="/login"
             class="bg-[#670D2F] hover:bg-[#520A25] text-white px-4 py-2 rounded shadow transition"
           >
-            SignUp
+            LogIn
           </Link>
         </div>
       </div>
@@ -36,9 +36,13 @@
     <main class="py-8 px-4 bg-gradient-to-b from-[#fff0f3] to-white min-h-screen">
       <slot />
     </main>
+
+     <Footer />
+
   </div>
 </template>
 
 <script setup>
 import { Link } from '@inertiajs/vue3';
+import Footer from '@/components/Footer.vue';
 </script>
