@@ -5,9 +5,9 @@
       <div class="absolute top-6 left-6">
         <Link
           href="/posts"
-          class="inline-flex items-center text-[#670D2F] hover:text-[#520A25] text-lg font-semibold transition"
+          class="inline-flex items-center text-[#670D2F] hover:text-[#520A25] text-xl font-semibold transition"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
           Back to Posts

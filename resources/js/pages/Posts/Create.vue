@@ -1,28 +1,29 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-[#fbecef] to-white py-12 px-4 flex justify-center items-start">
 
-
-
-    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-
-        <!-- Back Button (Top-Left) -->
+     <!-- Back Button (Top-Left) -->
       <div class="absolute top-6 left-6">
         <Link
           href="/posts"
-          class="inline-flex items-center text-[#670D2F] hover:text-[#520A25] text-lg font-semibold transition"
+          class="inline-flex items-center text-[#670D2F] hover:text-[#520A25] text-xl font-semibold transition"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
           Back to Posts
         </Link>
       </div>
       
+    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8 border border-gray-200 relative">
+
+
+
+      <!-- Title -->
       <h1 class="text-3xl font-bold text-[#670D2F] mb-6 text-center">✍️ Create New Post</h1>
 
       <form @submit.prevent="submit" enctype="multipart/form-data" class="space-y-6">
 
-        <!-- Title -->
+        <!-- Title Field -->
         <div>
           <label class="block text-gray-700 font-medium mb-1">Title</label>
           <input
@@ -36,7 +37,7 @@
           </div>
         </div>
 
-        <!-- Body -->
+        <!-- Body Field -->
         <div>
           <label class="block text-gray-700 font-medium mb-1">Body</label>
           <textarea
@@ -84,7 +85,7 @@
 </template>
 
 <script setup>
-import { useForm } from '@inertiajs/vue3';
+import { useForm, Link } from '@inertiajs/vue3'; // ✅ Link imported
 
 const form = useForm({
   title: '',
@@ -98,7 +99,7 @@ function handleFileChange(event) {
 
 function submit() {
   form.post('/posts', {
-    forceFormData: true, // ✅ required for image uploads
+    forceFormData: true, // ✅ Required for file upload
   });
 }
 </script>
